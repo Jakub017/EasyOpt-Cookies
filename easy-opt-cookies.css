@@ -89,8 +89,152 @@
     color: #fff;
 }
 
-/* Media queries */
 
+/* Modal styles */
+#easy-opt-cookies-modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    padding-top: 0;
+}
+
+#easy-opt-cookies-modal.easy-opt-modal-active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.12) 0 3px 8px;
+    max-width: 350px;
+    border-radius: var(--easy-cookies-border-radius);
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.easy-cookies-modal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    position: sticky;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #fff;
+    top: -1px;
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 999999;
+}
+
+.easy-cookies-modal-title {
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.easy-cookies-modal-description {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    flex-basis: 80%;
+    padding: 0 20px;
+}
+
+.easy-cookies-modal-close {
+    width: 30px;
+    cursor: pointer;
+}
+
+.easy-cookies-modal-types {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.easy-cookies-modal-type {
+    padding: 15px;
+    border: 1px solid #f1f1f1;
+    border-radius: var(--easy-cookies-border-radius);
+}
+
+.easy-cookies-modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.easy-cookies-modal-content .easy-cookies-modal-description {
+    padding: 0;
+}
+
+.easy-cookies-modal-name {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.easy-cookies-modal-button {
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    width: 35px;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+
+.easy-cookies-modal-button-active {
+    background-color: var(--easy-cookies-main-color);
+}
+
+.easy-cookies-modal-button-active:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
+}
+
+.easy-cookies-modal-button-disabled {
+    background-color: #E7E7E7;
+    color: #fff;
+}
+
+.easy-cookies-modal-button-disabled:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+}
+
+/* Media queries */
 @media(min-width: 768px) {
     #easy-opt-cookies {
         right: auto;
@@ -104,6 +248,12 @@
 @media(min-width: 1024px) {
     #easy-opt-cookies {
         max-width: 550px;
+    }
+
+    #easy-opt-cookies-modal.easy-opt-modal-active {
+        max-width: 550px;
+        height: 600px;
+
     }
 
     .easy-cookies-button {
