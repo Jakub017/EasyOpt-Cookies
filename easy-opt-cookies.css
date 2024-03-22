@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --easy-cookies-main-color: #009bde;
+    --easy-cookies-border-radius: 10px;
+}
+
+#easy-opt-cookies {
+    position: fixed;
+    z-index: 9999;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 3px 8px;
+    border-radius: var(--easy-cookies-border-radius);
+    width: 100%;
+    max-width: 330px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.easy-cookies-content {
+    max-height: 290px;
+    overflow-y: scroll;
+    padding: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.easy-cookies-title,
+.easy-cookies-description {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.easy-cookies-title {
+    font-size: 20px;
+}
+
+.easy-cookies-description {
+    font-size: 14px;
+}
+
+.easy-cookies-link {
+    color: var(--easy-cookies-main-color);
+    text-decoration: none;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+.easy-cookies-link:hover {
+    text-decoration: underline;
+}
+
+.easy-cookies-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f1f1;
+    box-sizing: border-box;
+}
+
+.easy-cookies-button {
+    background-color: #fff;
+    border: 2px solid var(--easy-cookies-main-color);
+    color: var(--easy-cookies-main-color);
+    padding: 10px;
+    border-radius: var(--easy-cookies-border-radius);
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins',
+        sans-serif;
+    width: 100px;
+}
+
+.easy-cookies-accept {
+    background-color: var(--easy-cookies-main-color);
+    color: #fff;
+}
+
+/* Media queries */
+
+@media(min-width: 768px) {
+    #easy-opt-cookies {
+        right: auto;
+    }
+
+    .easy-cookies-content {
+        margin-bottom: 64px;
+    }
+}
+
+@media(min-width: 1024px) {
+    #easy-opt-cookies {
+        max-width: 550px;
+    }
+
+    .easy-cookies-button {
+        width: 160px;
+    }
+}
